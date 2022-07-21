@@ -29,10 +29,10 @@ const routes = [{
     },
     {
       path: '/echartsPie',
-      name: 'echartsLine',
-      component: () => import('@/views/echarts-line.vue'),
+      name: 'echartsPie',
+      component: () => import('@/views/echarts-pie.vue'),
       meta: {
-        title: 'Echarts-折线图'
+        title: 'Echarts-饼图'
       },
     }
   ]
