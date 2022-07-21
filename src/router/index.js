@@ -12,15 +12,23 @@ const routes = [{
   },
   component: () => import('@/App.vue'),
   children: [{
-      path: '/echartsBar',
-      name: 'EchartsBar',
-      component: () => import('@/views/echarts-bar.vue'),
+    path: '/echartsBar',
+    name: 'EchartsBar',
+    component: () => import('@/views/echarts-bar.vue'),
+    meta: {
+      title: 'Echarts-柱状图'
+    },
+  },
+    {
+      path: '/echartsLine',
+      name: 'echartsLine',
+      component: () => import('@/views/echarts-line.vue'),
       meta: {
-        title: 'Echarts-柱状图'
+        title: 'Echarts-折线图'
       },
     },
     {
-      path: '/echartsLine',
+      path: '/echartsPie',
       name: 'echartsLine',
       component: () => import('@/views/echarts-line.vue'),
       meta: {
