@@ -1,47 +1,42 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Vue from "vue";
+import VueRouter from "vue-router";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
-const routes = [{
-  path: '/',
-  name: 'echarts',
-  redirect: '/echarts_demo',
-  meta: {
-    title: '首页'
-  },
-  component: () => import('@/App.vue'),
-  children: [{
-    path: '/echartsBar',
-    name: 'EchartsBar',
-    component: () => import('@/views/echarts-bar.vue'),
+const routes = [
+  {
+    path: "/",
+    name: "elementUI",
+    redirect: "/elementUI-demo",
     meta: {
-      title: 'Echarts-柱状图'
+      title: "首页",
     },
+    component: () => import("@/App.vue"),
+    children: [
+      {
+        path: "/elementUI-DatePicker",
+        name: "DatePicker",
+        component: () => import("../views/element-ui/DatePicker.vue"),
+        meta: {
+          title: "时间选择器",
+        },
+      },
+      {
+        path: "/elementUI-step",
+        name: "steps",
+        component: () => import("../views/element-ui/el-Step/el-step.vue"),
+        meta: {
+          title: "步骤条",
+        },
+      },
+    ],
   },
-    {
-      path: '/echartsLine',
-      name: 'echartsLine',
-      component: () => import('@/views/echarts-line.vue'),
-      meta: {
-        title: 'Echarts-折线图'
-      },
-    },
-    {
-      path: '/echartsPie',
-      name: 'echartsPie',
-      component: () => import('@/views/echarts-pie.vue'),
-      meta: {
-        title: 'Echarts-饼图'
-      },
-    }
-  ]
-}]
+];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;

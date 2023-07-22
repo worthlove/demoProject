@@ -23,7 +23,7 @@ export default {
       this.Line = this.$echarts.init(document.getElementById('ufo'))
       let option = {
         title: {
-          text: 'Echarts 组件 - 折线图',
+          text: 'charts 组件 - 折线图',
           left: 'center',
           top: '20rem',
         },
