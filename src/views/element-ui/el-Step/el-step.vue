@@ -1,4 +1,4 @@
-el-icon-success<template>
+<template>
   <div style="box-sizing: border-box; padding: 200px">
     <div style="overflow-y: auto">
       <mSteps :active="active" align-center finish-status="">
@@ -8,6 +8,7 @@ el-icon-success<template>
           status="wait"
           topTitle="2023-07-21 23:59:59"
           topDesc="哈哈哈"
+          class="step-start"
         >
           <template slot="icon">
             <!-- <img
@@ -130,6 +131,13 @@ export default {
 Ï
 
 <style>
+/* .step-error {
+  color: red;
+} */
+
+.step-start .el-step__line {
+  background-color: green;
+}
 .step-error {
   color: red;
 }
