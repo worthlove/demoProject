@@ -29,6 +29,22 @@ const routes = [
           title: "步骤条",
         },
       },
+      {
+        path: "/elementUI-select",
+        name: "select",
+        component: () => import("../views/element-ui/el-Select/el-Select.vue"),
+        meta: {
+          title: "步骤条",
+        },
+      },
+      {
+        path: "/elementUI-tree",
+        name: "trees",
+        component: () => import("../views/element-ui/el-tree/el-tree.vue"),
+        meta: {
+          title: "树状图",
+        },
+      },
     ],
   },
 ];

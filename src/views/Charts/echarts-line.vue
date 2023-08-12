@@ -9,7 +9,7 @@ export default {
   name: 'echarts-line',
   data () {
     return {
-      Line: null,
+      Line: null
     }
   },
   mounted () {
@@ -20,37 +20,37 @@ export default {
   },
   methods: {
     drawChart () {
-      this.Line = this.$echarts.init(document.getElementById('ufo'))
-      let option = {
+      this.LineCharts = this.$echarts.init(document.getElementById('ufo'))
+      const option = {
         title: {
           text: 'charts 组件 - 折线图',
           left: 'center',
-          top: '20rem',
+          top: '20rem'
         },
         xAxis: {
           type: 'category',
-          data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+          data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
         },
         yAxis: {
-          type: 'value',
+          type: 'value'
         },
         series: [
           {
             data: [128, 210, 234, 137, 255, 214, 222],
-            type: 'line',
+            type: 'line'
           },
           {
             date: [150, 230, 224, 218, 135, 147, 260],
-            type: 'line',
-          },
-        ],
+            type: 'line'
+          }
+        ]
       }
-      this.Line.setOption(option)
+      this.LineCharts.setOption(option)
     },
     resizeChart () {
-      this.Line ? this.Line.resize() : false
-    },
-  },
+      this.LineCharts ? this.Line.resize() : false
+    }
+  }
 }
 </script>
 
