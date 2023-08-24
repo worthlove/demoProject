@@ -16,7 +16,8 @@ const routes = [
       {
         path: "/elementUI-DatePicker",
         name: "DatePicker",
-        component: () => import("../views/element-ui/DatePicker.vue"),
+        component: () =>
+          import("../views/element-ui/el-DatePicker/mDatePicker.vue"),
         meta: {
           title: "时间选择器",
         },
@@ -24,7 +25,7 @@ const routes = [
       {
         path: "/elementUI-step",
         name: "steps",
-        component: () => import("../views/element-ui/el-Step/el-step.vue"),
+        component: () => import("../views/element-ui/el-Step/mStep.vue"),
         meta: {
           title: "步骤条",
         },
@@ -32,7 +33,7 @@ const routes = [
       {
         path: "/elementUI-select",
         name: "select",
-        component: () => import("../views/element-ui/el-Select/el-Select.vue"),
+        component: () => import("../views/element-ui/el-Select/mSelect.vue"),
         meta: {
           title: "步骤条",
         },
@@ -40,9 +41,25 @@ const routes = [
       {
         path: "/elementUI-tree",
         name: "trees",
-        component: () => import("../views/element-ui/el-tree/el-tree.vue"),
+        component: () => import("@/views/element-ui/el-Tree/mTree.vue"),
         meta: {
           title: "树状图",
+        },
+      },
+      {
+        path: "/elementUI-Table",
+        name: "Table",
+        component: () => import("@/views/element-ui/el-Table/mTable.vue"),
+        meta: {
+          title: "表格",
+        },
+      },
+      {
+        path: "/elementUI-Upload",
+        name: "Upload",
+        component: () => import("@/views/element-ui/el-Upload/mUpload.vue"),
+        meta: {
+          title: "附件上传",
         },
       },
     ],

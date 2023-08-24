@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import _default from 'vuex'
 export default {
   name: 'echartsBar',
   data () {
