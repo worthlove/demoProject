@@ -6,78 +6,78 @@
 
 <script>
 export default {
-  name: "echarts-pie",
-  data() {
+  name: 'echarts-pie',
+  data () {
     return {
-      pies: null,
-    };
+      pies: null
+    }
   },
-  mounted() {
-    window.addEventListener("resize", () => {
-      this.resizeChart();
-    });
-    this.drawChart();
+  mounted () {
+    window.addEventListener('resize', () => {
+      this.resizeChart()
+    })
+    this.drawChart()
   },
   methods: {
-    drawChart() {
-      this.pies = this.$echarts.init(document.getElementById("pie"));
-      let option = {
+    drawChart () {
+      this.pies = this.$echarts.init(document.getElementById('pie'))
+      const option = {
         title: {
-          text: "Referer of a Website",
-          subtext: "Fake Data",
-          left: "center",
+          text: 'Referer of a Website',
+          subtext: 'Fake Data',
+          left: 'center'
         },
         tooltip: {
-          trigger: "item",
+          trigger: 'item'
         },
         legend: {
-          orient: "vertical",
-          left: "left",
+          orient: 'vertical',
+          left: 'left'
         },
         series: [
           {
-            name: "Access From",
-            type: "pie",
-            radius: "50%",
+            name: 'Access From',
+            type: 'pie',
+            radius: '50%',
             data: [
               {
                 value: 1048,
-                name: "Search Engine",
+                name: 'Search Engine'
               },
               {
                 value: 735,
-                name: "Direct",
+                name: 'Direct'
               },
               {
                 value: 580,
-                name: "Email",
+                name: 'Email'
               },
               {
                 value: 484,
-                name: "Union Ads",
+                name: 'Union Ads'
               },
               {
                 value: 300,
-                name: "Video Ads",
-              },
+                name: 'Video Ads'
+              }
             ],
             emphasis: {
               itemStyle: {
                 shadowBlur: 10,
                 shadowOffsetX: 0,
-                shadowColor: "rgba(0, 0, 0, 0.5)",
-              },
-            },
-          },
-        ],
-      };
-      this.pies.setOption(option);
+                shadowColor: 'rgba(0, 0, 0, 0.5)'
+              }
+            }
+          }
+        ]
+      }
+      this.pies.setOption(option)
     },
-    resizeChart() {
-      this.pies ? this.pies.resize() : false;
-    },
-  },
-};
+    resizeChart () {
+      this.pies ? this.pies.resize() : false
+    }
+  }
+}
 </script>
 
 <style lang="stylus" scoped>
