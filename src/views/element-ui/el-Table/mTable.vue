@@ -32,8 +32,8 @@ export default {
   components: { MTable },
   data () {
     return {
-      isEmptyText: 'data',     // 无数据时显示
-      isBorder: false,        // 是否显示边框
+      isEmptyText: 'data', // 无数据时显示
+      isBorder: false, // 是否显示边框
       // 获取商品信息列表的入参
       queryGoods: {
         query: '',
@@ -56,7 +56,7 @@ export default {
           PerPor: '熊芳',
           status: '1',
           Time: '2022-12-99'
-        },
+        }
       ],
       TableLabel: [
         {
@@ -83,7 +83,6 @@ export default {
             } else {
               return '--'
             }
-
           }
         },
         {
@@ -91,9 +90,9 @@ export default {
           props: 'status',
           align: 'center',
           xhtml: (row) => {
-            if (row.status == 0) {
+            if (row.status === 0) {
               return ('语文')
-            } else if (row.status == 1) {
+            } else if (row.status === 1) {
               return ('数学')
             } else {
               return '--'
