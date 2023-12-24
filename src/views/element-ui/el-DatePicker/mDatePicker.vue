@@ -62,7 +62,7 @@ export default {
           maxTime = dt[1]
           if (!oldValue) {
             this.dataForm.faultTime = dateTime
-          } else if (newValue.split(' ')[0] != oldValue.split(' ')[0]) {
+          } else if (newValue.split(' ')[0] !== oldValue.split(' ')[0]) {
             this.dataForm.faultTime = dateTime
           }
         } else {

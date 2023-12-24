@@ -102,6 +102,15 @@ const routes = [
           title: "天气1",
         },
       },
+      {
+        path: "/elementUI-pagination",
+        name: "pagination",
+        component: () =>
+          import("../views/element-ui/el-pagination/index.vue"),
+        meta: {
+          title: "按钮组",
+        },
+      },
     ],
   },
 ];
